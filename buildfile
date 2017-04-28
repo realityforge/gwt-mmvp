@@ -1,5 +1,6 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
+require 'buildr/gwt'
 
 desc 'MMVP: Enhance the activities and places library'
 define 'gwt-mmvp' do
@@ -25,8 +26,13 @@ define 'gwt-mmvp' do
   package(:sources)
   package(:javadoc)
 
+  gwt(%w(org.realityforge.gwt.mmvp.MMVP),
+      :java_args => %w(-Xms512M -Xmx1024M),
+      :draft_compile => 'true') unless ENV['GWT'] == 'no'
+
   iml.add_gwt_facet({'org.realityforge.gwt.mmvp.MMVP' => false},
                     :settings => {:compilerMaxHeapSize => '1024'},
                     :gwt_dev_artifact => :gwt_dev)
   iml.add_jruby_facet
+
 end
