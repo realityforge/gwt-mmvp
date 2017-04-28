@@ -20,7 +20,10 @@ define 'gwt-mmvp' do
                :gwt_user,
                :gwt_gin,
                :javax_inject,
-               :javax_inject_sources
+               :javax_inject_sources,
+               :aopalliance,
+               :guice,
+               :guice_assistedinject
 
   package(:jar).include("#{_(:source, :main, :java)}/*")
   package(:sources)
