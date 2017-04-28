@@ -1,5 +1,5 @@
 ## 0.5:
-* Upgrade the JDK 7.
+* Upgrade to JDK 7.
 * Correct the group from org.realityforge.gwt.ga to org.realityforge.gwt.mmvp
 
 ## 0.4:
