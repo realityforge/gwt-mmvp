@@ -14,8 +14,7 @@ import javax.inject.Provider;
 public abstract class AbstractActivityMapper
   implements ActivityMapper
 {
-  private final HashMap<Class<? extends Place>, Provider<? extends Activity>> _providers =
-    new HashMap<Class<? extends Place>, Provider<? extends Activity>>();
+  private final HashMap<Class<? extends Place>, Provider<? extends Activity>> _providers = new HashMap<>();
 
   private Activity _currentActivity;
 
