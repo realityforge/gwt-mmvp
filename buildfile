@@ -25,5 +25,8 @@ define 'gwt-mmvp' do
   package(:sources)
   package(:javadoc)
 
+  iml.add_gwt_facet({'org.realityforge.gwt.mmvp.MMVP' => false},
+                    :settings => {:compilerMaxHeapSize => '1024'},
+                    :gwt_dev_artifact => :gwt_dev)
   iml.add_jruby_facet
 end
