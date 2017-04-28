@@ -1,6 +1,5 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
-require 'buildr/custom_pom'
 
 desc 'MMVP: Enhance the activities and places library'
 define 'gwt-mmvp' do
