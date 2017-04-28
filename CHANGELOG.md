@@ -1,4 +1,4 @@
-## 0.6:
+## 0.6 (Pending):
 * Upgrade to JDK 8.
 * Upgrade to GWT 2.8.
 * Remove ActivityAsyncProxy as never used.
