@@ -1,5 +1,6 @@
 ## 0.6:
 * Upgrade to JDK 8.
+* Upgrade to GWT 2.8.
 
 ## 0.5:
 * Upgrade to JDK 7.
