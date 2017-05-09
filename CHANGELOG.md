@@ -4,6 +4,8 @@
 * Remove ActivityAsyncProxy as never used.
 * Add `MvpComponentsGinModule` which has been copied back from downstream libraries.
 * Add `AbstractMvpGinModule` which has been copied back from downstream libraries.
+* Introduce `ActivityPresenter` to ensure that the implementations that are actually
+  bound by gin are provided rather than direct implementation.
 
 ## 0.5:
 * Upgrade to JDK 7.
