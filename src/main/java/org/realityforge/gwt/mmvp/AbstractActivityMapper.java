@@ -36,7 +36,7 @@ public abstract class AbstractActivityMapper
       if ( activity instanceof PlaceAware )
       {
         final boolean changed = ( (PlaceAware) activity ).atPlace( place );
-        assert ( changed );
+        assert changed;
       }
       _currentActivity = activity;
       return activity;
