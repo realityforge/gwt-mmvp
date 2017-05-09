@@ -14,9 +14,11 @@ define 'gwt-mmvp' do
   pom.add_apache_v2_license
   pom.add_github_project('realityforge/gwt-mmvp')
   pom.add_developer('realityforge', 'Peter Donald')
-  pom.provided_dependencies.concat [:javax_annotation, :javax_inject, :javax_inject_sources]
+  pom.provided_dependencies.concat [:javax_annotation, :findbugs_annotations, :javax_inject, :javax_inject_sources]
 
   compile.with :javax_annotation,
+               :findbugs_annotations,
+               :gin_extensions,
                :gwt_user,
                :gwt_gin,
                :javax_inject,
@@ -33,8 +35,8 @@ define 'gwt-mmvp' do
       :java_args => %w(-Xms512M -Xmx1024M),
       :draft_compile => 'true') unless ENV['GWT'] == 'no'
 
-  iml.add_gwt_facet({'org.realityforge.gwt.mmvp.MMVP' => false},
-                    :settings => {:compilerMaxHeapSize => '1024'},
+  iml.add_gwt_facet({ 'org.realityforge.gwt.mmvp.MMVP' => false },
+                    :settings => { :compilerMaxHeapSize => '1024' },
                     :gwt_dev_artifact => :gwt_dev)
   iml.add_jruby_facet
 

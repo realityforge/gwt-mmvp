@@ -2,6 +2,8 @@
 * Upgrade to JDK 8.
 * Upgrade to GWT 2.8.
 * Remove ActivityAsyncProxy as never used.
+* Add `MvpComponentsGinModule` which has been copied back from downstream libraries.
+* Add `AbstractMvpGinModule` which has been copied back from downstream libraries.
 
 ## 0.5:
 * Upgrade to JDK 7.
