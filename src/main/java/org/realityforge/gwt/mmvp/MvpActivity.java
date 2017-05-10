@@ -31,6 +31,11 @@ public abstract class MvpActivity<P extends ActivityPresenter, V extends View<P>
     final V view = getView();
     view.bind( (P) this );
     acceptsOneWidget.setWidget( view.asWidget() );
+    onStart();
+  }
+
+  protected void onStart()
+  {
   }
 
   @Nonnull
