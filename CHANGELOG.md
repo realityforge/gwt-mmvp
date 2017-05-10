@@ -1,3 +1,5 @@
+## 0.9:
+
 ## 0.8:
 * Add `PlaceHistoryHandler` component to those exposed by `MvpComponentsGinModule`.
 
