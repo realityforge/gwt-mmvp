@@ -1,3 +1,6 @@
+## 0.8:
+* Add `PlaceHistoryHandler` component to those exposed by `MvpComponentsGinModule`.
+
 ## 0.7:
 * Add `ActivityManager` component to those exposed by `MvpComponentsGinModule`.
 

@@ -4,7 +4,10 @@ import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceController;
+import com.google.gwt.place.shared.PlaceHistoryHandler;
+import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.inject.Provides;
 import javax.annotation.Nonnull;
 import javax.inject.Singleton;
@@ -15,6 +18,18 @@ public class MvpComponentsGinModule
   @Override
   protected void configure()
   {
+  }
+
+  @Provides
+  @Singleton
+  public final PlaceHistoryHandler getHistoryHandler( @Nonnull final PlaceController placeController,
+                                                      @Nonnull final PlaceHistoryMapper historyMapper,
+                                                      @Nonnull final com.google.web.bindery.event.shared.EventBus eventBus,
+                                                      @Nonnull final Place place )
+  {
+    final PlaceHistoryHandler historyHandler = new PlaceHistoryHandler( historyMapper );
+    historyHandler.register( placeController, eventBus, place );
+    return historyHandler;
   }
 
   @Provides
