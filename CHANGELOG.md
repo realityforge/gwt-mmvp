@@ -1,4 +1,5 @@
 ## 0.9:
+* Enhance `MvpActivity` to accept a view in the constructor and implement the `getView()` method.
 
 ## 0.8:
 * Add `PlaceHistoryHandler` component to those exposed by `MvpComponentsGinModule`.
