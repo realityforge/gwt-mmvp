@@ -1,4 +1,5 @@
 ## 0.9:
+* Make `MvpActivity.getActivity()` method final.
 * Enhance `MvpActivity` to add `onStart()` hook method to ease extensions from subclasses.
 * Enhance `MvpActivity` to accept a view in the constructor and implement the `getView()` method.
 

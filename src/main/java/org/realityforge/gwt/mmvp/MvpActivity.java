@@ -40,7 +40,7 @@ public abstract class MvpActivity<P extends ActivityPresenter, V extends View<P>
 
   @Nonnull
   @Override
-  public Activity getActivity()
+  public final Activity getActivity()
   {
     return this;
   }
