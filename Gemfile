@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'buildr', '= 1.5.5'
+gem 'buildr', '= 1.5.8'
 gem 'mcrt', '= 1.14.0'
