@@ -1,4 +1,5 @@
 ## 0.10 (Pending):
+* Introduce new GWT modules so that the library can be adopted without adopting GIN.
 
 ## 0.9:
 * Make `MvpActivity.getActivity()` method final.

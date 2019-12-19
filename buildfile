@@ -31,7 +31,7 @@ define 'gwt-mmvp' do
   package(:sources)
   package(:javadoc)
 
-  gwt(%w(org.realityforge.gwt.mmvp.MMVP),
+  gwt(%w(org.realityforge.gwt.mmvp.ioc.Gin org.realityforge.gwt.mmvp.MMVP),
       :java_args => %w(-Xms512M -Xmx1024M),
       :draft_compile => 'true') unless ENV['GWT'] == 'no'
 

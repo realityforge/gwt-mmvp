@@ -4,7 +4,8 @@
   <inherits name="com.google.gwt.event.Event"/>
   <inherits name="com.google.gwt.place.Place"/>
   <inherits name="com.google.gwt.activity.Activity"/>
-  <inherits name="com.google.gwt.inject.Inject"/>
-  <inherits name="org.realityforge.gwt.gin.GinExtensions"/>
-  <source path=''/>
+
+  <source path=''>
+    <include name='*.java'/>
+  </source>
 </module>
