@@ -1,4 +1,4 @@
-## 0.10 (Pending):
+## 0.10:
 * Introduce new GWT modules so that the library can be adopted without adopting GIN.
 
 ## 0.9:
