@@ -1,7 +1,7 @@
 ## Unreleased
 * Remove GIN/javax.inject/dagger integration.
 * Merge `org.realityforge.gwt.mmvp.Base` into `org.realityforge.gwt.mmvp.MMVP` as there is no longer a valid use-case for separating them.
-* Refactor `AbstractActivityMapper` to use `Supplier` interface rather than `javax.inject.Provider` interface. 
+* Refactor `AbstractActivityMapper` to use `Supplier` interface rather than `javax.inject.Provider` interface.
 
 ## 0.10:
 * Introduce new GWT modules so that the library can be adopted without adopting GIN.
