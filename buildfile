@@ -14,10 +14,9 @@ define 'gwt-mmvp' do
   pom.add_apache_v2_license
   pom.add_github_project('realityforge/gwt-mmvp')
   pom.add_developer('realityforge', 'Peter Donald')
-  pom.provided_dependencies.concat [:javax_annotation, :findbugs_annotations]
+  pom.provided_dependencies.concat [:javax_annotation]
 
   compile.with :javax_annotation,
-               :findbugs_annotations,
                :gwt_user
 
   package(:jar).include("#{_(:source, :main, :java)}/*")
