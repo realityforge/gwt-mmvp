@@ -4,8 +4,8 @@ import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Supplier;
-import javax.inject.Provider;
 
 /**
  * Abstract ActivityMapper to simplify binding activity mappers to places.
@@ -15,8 +15,7 @@ import javax.inject.Provider;
 public abstract class AbstractActivityMapper
   implements ActivityMapper
 {
-  private final HashMap<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _suppliers = new HashMap<>();
-
+  private final Map<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _suppliers = new HashMap<>();
   private Activity _currentActivity;
 
   @Override
