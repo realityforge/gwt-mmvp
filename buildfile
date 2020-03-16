@@ -14,18 +14,11 @@ define 'gwt-mmvp' do
   pom.add_apache_v2_license
   pom.add_github_project('realityforge/gwt-mmvp')
   pom.add_developer('realityforge', 'Peter Donald')
-  pom.provided_dependencies.concat [:javax_annotation, :findbugs_annotations, :javax_inject, :javax_inject_sources]
+  pom.provided_dependencies.concat [:javax_annotation, :findbugs_annotations]
 
   compile.with :javax_annotation,
                :findbugs_annotations,
-               :gin_extensions,
-               :gwt_user,
-               :gwt_gin,
-               :javax_inject,
-               :javax_inject_sources,
-               :aopalliance,
-               :guice,
-               :guice_assistedinject
+               :gwt_user
 
   package(:jar).include("#{_(:source, :main, :java)}/*")
   package(:sources)

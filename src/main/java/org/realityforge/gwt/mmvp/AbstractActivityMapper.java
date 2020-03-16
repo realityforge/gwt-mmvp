@@ -4,6 +4,7 @@ import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 import java.util.HashMap;
+import java.util.function.Supplier;
 import javax.inject.Provider;
 
 /**
@@ -14,7 +15,7 @@ import javax.inject.Provider;
 public abstract class AbstractActivityMapper
   implements ActivityMapper
 {
-  private final HashMap<Class<? extends Place>, Provider<? extends ActivityPresenter>> _providers = new HashMap<>();
+  private final HashMap<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _providers = new HashMap<>();
 
   private Activity _currentActivity;
 

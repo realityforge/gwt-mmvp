@@ -1,3 +1,6 @@
+## Unreleased
+* Remove GIN/javax.inject/dagger integration.
+
 ## 0.10:
 * Introduce new GWT modules so that the library can be adopted without adopting GIN.
 
