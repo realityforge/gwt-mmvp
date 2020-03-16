@@ -15,7 +15,7 @@ import javax.inject.Provider;
 public abstract class AbstractActivityMapper
   implements ActivityMapper
 {
-  private final HashMap<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _providers = new HashMap<>();
+  private final HashMap<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _suppliers = new HashMap<>();
 
   private Activity _currentActivity;
 
@@ -30,10 +30,10 @@ public abstract class AbstractActivityMapper
       }
       _currentActivity = null;
     }
-    final Provider<? extends ActivityPresenter> provider = _providers.get( place.getClass() );
-    if ( null != provider )
+    final Supplier<? extends ActivityPresenter> supplier = _suppliers.get( place.getClass() );
+    if ( null != supplier )
     {
-      final ActivityPresenter presenter = provider.get();
+      final ActivityPresenter presenter = supplier.get();
       final Activity activity = presenter.getActivity();
       if ( activity instanceof PlaceAware )
       {
@@ -47,8 +47,8 @@ public abstract class AbstractActivityMapper
   }
 
   protected final <P extends Place, A extends ActivityPresenter>
-  void registerProvider( final Class<P> placeClass, final Provider<A> provider )
+  void registerProvider( final Class<P> placeClass, final Supplier<A> supplier )
   {
-    _providers.put( placeClass, provider );
+    _suppliers.put( placeClass, supplier );
   }
 }
