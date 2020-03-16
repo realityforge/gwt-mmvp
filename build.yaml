@@ -3,6 +3,8 @@ repositories:
    - http://repo1.maven.org/maven2
 
 artifacts:
+  idea_codestyle: au.com.stocksoftware.idea.codestyle:idea-codestyle:xml:1.14
+
   javax_annotation: org.realityforge.javax.annotation:javax.annotation:jar:1.0.0
   findbugs_annotations: com.google.code.findbugs:annotations:jar:3.0.0
   javax_inject: javax.inject:javax.inject:jar:1

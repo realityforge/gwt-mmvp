@@ -35,6 +35,8 @@ define 'gwt-mmvp' do
       :java_args => %w(-Xms512M -Xmx1024M),
       :draft_compile => 'true') unless ENV['GWT'] == 'no'
 
+  ipr.add_component_from_artifact(:idea_codestyle)
+
   iml.add_gwt_facet({ 'org.realityforge.gwt.mmvp.MMVP' => false },
                     :settings => { :compilerMaxHeapSize => '1024' },
                     :gwt_dev_artifact => :gwt_dev)
