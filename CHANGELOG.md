@@ -1,6 +1,6 @@
 ## 0.12
 * Bump the version of gwt tested against to `2.8.2-v20191108`
-* Convert gwt dependency into a "provided" dependency
+* Convert gwt dependency into a "provided" dependency.
 
 ## 0.11
 * Remove GIN/javax.inject/dagger integration.
