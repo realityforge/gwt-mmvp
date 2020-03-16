@@ -5,7 +5,10 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Supplier;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * Abstract ActivityMapper to simplify binding activity mappers to places.
@@ -15,11 +18,13 @@ import java.util.function.Supplier;
 public abstract class AbstractActivityMapper
   implements ActivityMapper
 {
+  @Nonnull
   private final Map<Class<? extends Place>, Supplier<? extends ActivityPresenter>> _suppliers = new HashMap<>();
+  @Nullable
   private Activity _currentActivity;
 
   @Override
-  public Activity getActivity( final Place place )
+  public Activity getActivity( @Nonnull final Place place )
   {
     if ( null != _currentActivity && _currentActivity instanceof PlaceAware )
     {
@@ -46,8 +51,8 @@ public abstract class AbstractActivityMapper
   }
 
   protected final <P extends Place, A extends ActivityPresenter>
-  void registerProvider( final Class<P> placeClass, final Supplier<A> supplier )
+  void registerProvider( @Nonnull final Class<P> placeClass, @Nonnull final Supplier<A> supplier )
   {
-    _suppliers.put( placeClass, supplier );
+    _suppliers.put( Objects.requireNonNull( placeClass ), Objects.requireNonNull( supplier ) );
   }
 }
