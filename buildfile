@@ -39,5 +39,4 @@ define 'gwt-mmvp' do
                     :settings => { :compilerMaxHeapSize => '1024' },
                     :gwt_dev_artifact => :gwt_dev)
   iml.add_jruby_facet
-
 end
