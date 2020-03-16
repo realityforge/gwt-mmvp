@@ -15,6 +15,9 @@ define 'gwt-mmvp' do
   pom.add_github_project('realityforge/gwt-mmvp')
   pom.add_developer('realityforge', 'Peter Donald')
   pom.provided_dependencies.concat [:javax_annotation, :gwt_user]
+  pom.include_transitive_dependencies << artifact(:javax_annotation)
+  pom.include_transitive_dependencies << artifact(:gwt_user)
+  pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && (dep[:artifact] == artifact(:javax_annotation) || dep[:artifact] == artifact(:gwt_user)) }
 
   compile.with :javax_annotation,
                :gwt_user
