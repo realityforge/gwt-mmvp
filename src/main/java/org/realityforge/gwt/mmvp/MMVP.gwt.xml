@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-  <inherits name='org.realityforge.gwt.mmvp.Base'/>
-  <inherits name='org.realityforge.gwt.mmvp.ioc.Gin'/>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.gwt.event.Event"/>
+  <inherits name="com.google.gwt.place.Place"/>
+  <inherits name="com.google.gwt.activity.Activity"/>
 
-  <source path='ignored'/>
+  <source path=''>
+    <include name='*.java'/>
+  </source>
 </module>
