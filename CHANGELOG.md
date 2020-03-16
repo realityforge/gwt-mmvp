@@ -1,3 +1,6 @@
+## 0.12
+* Bump the version of gwt tested agains to `2.8.2-v20191108`
+
 ## 0.11
 * Remove GIN/javax.inject/dagger integration.
 * Merge `org.realityforge.gwt.mmvp.Base` into `org.realityforge.gwt.mmvp.MMVP` as there is no longer a valid use-case for separating them.
