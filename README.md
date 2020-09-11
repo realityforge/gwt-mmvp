@@ -14,7 +14,7 @@ into the build system. i.e.
 <dependency>
    <groupId>org.realityforge.gwt.mmvp</groupId>
    <artifactId>gwt-mmvp</artifactId>
-   <version>0.12</version>
+   <version>0.13</version>
    <scope>provided</scope>
 </dependency>
 ```
