@@ -1,5 +1,6 @@
 ## Unreleased
 * Add `PlaceAwareActivity` to make it easy for activities to gain access to place that activated activity.
+* Bump the version of gwt tested against to `2.9.0`
 
 ## 0.12
 * Bump the version of gwt tested against to `2.8.2-v20191108`
