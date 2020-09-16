@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v0.15](https://github.com/realityforge/gwt-mmvp/tree/v0.15) (2020-09-16) · [Full Changelog](https://github.com/realityforge/gwt-mmvp/compare/v0.14...v0.15)
 
 * Add a `MvpActivity.isActive()` method to determine whether an activity is "active" (i.e. start has been invoked but
