@@ -12,6 +12,7 @@ public abstract class MvpActivity<P extends ActivityPresenter, V extends View<P>
   implements ActivityPresenter
 {
   private final V _view;
+  private boolean _active;
 
   public MvpActivity( @Nonnull final V view )
   {
@@ -31,11 +32,29 @@ public abstract class MvpActivity<P extends ActivityPresenter, V extends View<P>
     final V view = getView();
     view.bind( (P) this );
     acceptsOneWidget.setWidget( view.asWidget() );
+    _active = true;
     onStart();
   }
 
   protected void onStart()
   {
+  }
+
+  @Override
+  public void onCancel()
+  {
+    _active = false;;
+  }
+
+  @Override
+  public void onStop()
+  {
+    _active = false;
+  }
+
+  protected boolean isActive()
+  {
+    return _active;
   }
 
   @Nonnull

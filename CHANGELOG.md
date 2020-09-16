@@ -2,6 +2,9 @@
 
 ### Unreleased
 
+* Add a `MvpActivity.isActive()` method to determine whether an activity is "active" (i.e. start has been invoked but
+  neither `onStop` nor `onCancel` has been invoked.)
+
 ### [v0.14](https://github.com/realityforge/gwt-mmvp/tree/v0.14) (2020-09-11) · [Full Changelog](https://github.com/realityforge/gwt-mmvp/compare/v0.12...v0.14)
 
 * Add `PlaceAwareActivity` to make it easy for activities to gain access to place that activated activity.
