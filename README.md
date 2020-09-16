@@ -13,7 +13,7 @@ into the build system. i.e.
 <dependency>
    <groupId>org.realityforge.gwt.mmvp</groupId>
    <artifactId>gwt-mmvp</artifactId>
-   <version>0.14</version>
+   <version>0.15</version>
    <scope>provided</scope>
 </dependency>
 ```
